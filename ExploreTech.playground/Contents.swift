@@ -48,7 +48,7 @@ class Thing1 {
         print("Thing1 initialized!")
     }
     deinit {
-        print("Thing2 deinitialized!")
+        print("Thing1 deinitialized!")
     }
 }
 
@@ -70,4 +70,6 @@ newThing2?.thing1 = newThing1
 
 newThing1 = nil
 newThing2 = nil
+// the retain cycle is fixed when you see the
+// deinitialization messages in the log output
 
